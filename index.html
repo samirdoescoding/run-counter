@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Run Counter by Samir</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Run Counter</h1>
+    </header>
+    <main>
+      <fieldset>
+        <div>Target: <span class="display-target">0</span></div>
+      </fieldset>
+      <!--first Innings-->
+      <div class="teams">
+        <fieldset>
+          <legend>1st Innings</legend>
+          <div>[Team 1]</div>
+          <div class="display-section">
+            Fours: <span class="display-four reset-four">0</span><br />
+            Wickets: <span class="display-wicket reset-wicket">0</span>
+          </div>
+
+          <div>Overs: <span class="display-over reset-over">0.0</span></div>
+          <button onclick="end()" class="btn-end">End</button>
+        </fieldset>
+
+        <!--second Innings-->
+        <fieldset>
+          <div>[Team 2]</div>
+          <legend>2nd Innings</legend>
+          <div class="display-section">
+            Fours: <span class="four reset-four">0</span><br />
+            Wickets: <span class="wicket reset-wicket">0</span>
+          </div>
+
+          <div>Overs: <span class="over reset-over">0.0</span></div>
+          <button onclick="end2()" class="btn-end">End</button>
+        </fieldset>
+      </div>
+
+      <!--buttons-->
+      <div class="button-section">
+        <button onclick="ballAdder()" class="btn btn-ball">Ball</button>
+        <button onclick="fourAdder()" class="btn btn-four">Four</button>
+        <button onclick="wicketAdder()" class="btn btn-wicket">Wicket</button>
+        <button onclick="reset()" class="btn btn-reset">Reset</button>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <img src="sub.png" alt="" width="50px">
+      </div>
+      <div>
+        <div>Made by: Md. Samir Hossain(81A)</div>
+        <div>Department of Pharmacy</div>
+        <div>Stamford University Bangladesh</div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
