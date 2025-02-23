@@ -6,12 +6,13 @@ let fourDisplay2 = document.querySelector(".four");
 let wicketDisplay2 = document.querySelector(".wicket");
 let overDisplay2 = document.querySelector(".over");
 
+const resetBtn = document.querySelector(".btn-reset");
+
 //over counter
 const ballAdder = () => {
     let content = overDisplay.innerHTML;
     let contentNumber = parseFloat(content);
 
-console.log(Math.round(contentNumber));
     if(Math.round(contentNumber) - contentNumber == 0.5){
         contentNumber += 0.5
     }else{
@@ -57,14 +58,21 @@ const reset = () => {
 }
 
 //end function
+let endClicked = false;
+
 const end = () => {
+    if (endClicked) return;
+    endClicked = true;
+
     fourDisplay = fourDisplay2;
     overDisplay = overDisplay2;
     wicketDisplay = wicketDisplay2;
 
     document.querySelector(".display-target").innerHTML = numOfFour + 1;
     numOfFour = 0;
+
 }
+
 
 //end2 function
 let target = document.querySelector(".display-target");
